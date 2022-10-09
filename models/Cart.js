@@ -1,6 +1,6 @@
 const mongoose = require ("mongoose")
-
-const CartSchema = new mongoose.schema({
+const Scheme = mongoose.Schema;
+const CartSchema = new Scheme({
     userId:{type:String,required:true},
     products:[
         {

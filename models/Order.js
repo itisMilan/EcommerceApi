@@ -1,6 +1,6 @@
 const mongoose = require ("mongoose")
-
-const OrderSchema = new mongoose.schema({
+const Scheme = mongoose.Schema;
+const OrderSchema = new Scheme({
     userId:{type:String,required:true},
     products:[
         {
@@ -9,7 +9,7 @@ const OrderSchema = new mongoose.schema({
         }],
     amount:{type:Number,required:true},
     address:{type:Object,required:true},
-    status:{type:MediaStreamAudioDestinationNode,default:"pending"},
+    status:{type:String,default:"pending"},
 },
 {timestamps:true}
 );
