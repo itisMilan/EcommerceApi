@@ -16,11 +16,11 @@ const cors = require("cors")
 const { verifyToken } = require("./routes/verifyToken");
 
 dotenv.config();
-
+// console.log(  process.env.MONGO_URL)
 mongoose
   .connect(
-    "mongodb+srv://abhaymilan8gmailcom:5kr6M8UV6KX92zx@cluster0.x3aaa.mongodb.net/shop?retryWrites=true&w=majority"
-  )
+   process.env.MONGO_URL
+    )
   .then(() => console.log("Connection Successfull!"))
   .catch((err) => {
     console.log(err);
