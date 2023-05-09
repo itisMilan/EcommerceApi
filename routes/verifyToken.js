@@ -25,7 +25,7 @@ const verifyTokenAndAuthorization = (req, res, next) => {
       res.status(403).json("You are not allowed to do that!");
     }
   });
-};
+};  
 const verifyTokenAndAdmin = (req, res, next) => {
   verifyToken(req, res, () => {
     if (req.user.isAdmin) {
